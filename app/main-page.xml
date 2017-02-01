@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+
+    <GridLayout rows="auto, *, auto">
+        <StackLayout orientation="horizontal" row="0" padding="10">
+            <Label text="saveToGallery" />
+            <Switch checked="{{ saveToGallery }}"/>
+        </StackLayout>
+        <Image row="1" width="2048" height="1536" src="{{ cameraImage }}" loaded="loadedImage" id="image" stretch="aspectFit" margin="10"/>
+        <StackLayout orientation="vertical" row="2" padding="10">
+            <Button text="Take Picture" tap="onTakePictureTap" />
+            <Button text="Request Permissions" tap="onRequestPermissionsTap" />
+        </StackLayout>
+    </GridLayout>
+
+</Page>
